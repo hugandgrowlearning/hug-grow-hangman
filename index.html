@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Seasonal Build-a-Character Word Game</title><link rel="stylesheet" href="style.css"></head>
+<body><header><h1>Build-a-Character Word Game</h1><p class="subtitle">Guess the word before the character is complete!</p></header>
+<main class="wrap"><div id="themes" class="themes"></div>
+<section id="customBox" class="custom"><b>Customize your game</b><p>Enter words or short phrases, one per line.</p>
+<textarea id="customWords" placeholder="FINE MOTOR&#10;HANDWRITING&#10;SCISSORS"></textarea>
+<div class="controls"><button class="mainbtn" id="useCustom">Use My Words</button></div></section>
+<div class="card"><div class="game"><div class="character"><div id="figure" class="figure">⛄</div></div>
+<div><div id="themeTitle" class="small"></div><div id="word" class="word"></div><div id="status" class="status"></div>
+<div id="keyboard" class="keyboard"></div><div class="controls"><button id="newGame" class="mainbtn">New Word</button><button id="hint" class="mainbtn secondary">Give Me a Letter</button></div>
+<p class="small">6 incorrect guesses allowed • Works with mouse, touch, and keyboard</p></div></div></div></main>
+<script src="words.js"></script><script src="game.js"></script></body></html>
