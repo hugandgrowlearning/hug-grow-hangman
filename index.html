@@ -1,5 +1,26 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Hangman | Hug & Grow Learning Studio</title><link rel="stylesheet" href="style.css"></head>
+<title>Hangman | Hug & Grow Learning Studio</title><style>
+
+700;800&display=swap');
+:root{--ink:#4e4037;--green:#2f5147;--cream:#f7f0e3;--paper:#fffdf9;--accent:#c6e3f2;--accent2:#6e9eb7}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:"Trebuchet MS",Arial,sans-serif}
+.brand{display:flex;justify-content:center;align-items:center;gap:18px;padding:18px 12px 14px}.brandmark{width:74px;height:74px;border:3px solid var(--green);border-radius:50%;display:grid;place-items:center;font-size:42px;background:#fff;color:#d58ca0}.brand h1{font-family:"Comic Sans MS","Chalkboard SE","Marker Felt",cursive;color:var(--green);font-size:64px;line-height:.85;margin:0}.brand p{font-family:"Comic Sans MS","Chalkboard SE","Marker Felt",cursive;font-size:27px;margin:9px 0 0;color:#7a5a4a}
+main{max-width:1240px;margin:auto;padding:8px 20px 30px}.panel{background:var(--paper);border:2px solid #ead7b8;border-radius:30px;padding:30px;box-shadow:0 16px 35px #725b3820}.hidden{display:none!important}
+h2{font-family:"Comic Sans MS","Chalkboard SE","Marker Felt",cursive;font-size:38px;margin:0 0 6px}.lead{font-size:18px;color:#527469;margin:0 0 22px;font-weight:700}
+.theme-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.theme-card{border:0;border-radius:22px;min-height:142px;padding:18px 10px;cursor:pointer;color:var(--ink);box-shadow:0 8px 18px #7a654415;transition:.15s;touch-action:manipulation}.theme-card:hover{transform:translateY(-3px)}.theme-card .emoji{font-size:38px}.theme-card b{display:block;font-family:"Comic Sans MS","Chalkboard SE","Marker Felt",cursive;font-size:25px;margin-top:8px}.tagline{text-align:right;font-family:"Comic Sans MS","Chalkboard SE","Marker Felt",cursive;font-size:22px;margin-top:24px;color:#805e4d}
+.game-top{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;margin-bottom:20px}.theme-name{font-family:"Comic Sans MS","Chalkboard SE","Marker Felt",cursive;font-size:34px;text-align:center}.game-top .secondary{justify-self:end}
+button{font-family:"Trebuchet MS",Arial,sans-serif;font-weight:800}.back,.primary,.secondary{border:0;border-radius:14px;padding:12px 18px;cursor:pointer;touch-action:manipulation}.back{background:transparent;color:#725d50;font-size:16px}.primary{background:var(--accent2);color:white;font-size:17px}.secondary{background:#eee6da;color:#5d5047}
+.game-layout{display:grid;grid-template-columns:minmax(330px,.9fr) minmax(430px,1.25fr);gap:25px}.art-card{background:var(--accent);border-radius:25px;min-height:500px;padding:15px;display:flex;flex-direction:column;justify-content:center}.play-card{display:flex;flex-direction:column;justify-content:center;min-height:500px}
+#art svg{width:100%;height:400px;display:block}.wrong-count{text-align:center;font-weight:800;color:#6f6259}.word{text-align:center;font-family:"Comic Sans MS","Chalkboard SE","Marker Felt",cursive;font-size:clamp(30px,4vw,50px);letter-spacing:7px;min-height:80px;display:flex;align-items:center;justify-content:center;word-break:break-word}.status{text-align:center;min-height:36px;font-size:19px;font-weight:800;color:#587268}
+.keyboard{display:grid;grid-template-columns:repeat(9,1fr);gap:8px;margin:18px 0}.key{border:2px solid #e5d9c9;background:#fff;border-radius:12px;padding:13px 4px;font-size:18px;color:#51463e;cursor:pointer;touch-action:manipulation}.key.good{background:#dcebd5;border-color:#a9c69c}.key.bad{background:#f3d9d9;border-color:#d9aaaa}.key:disabled{opacity:.45}.row{display:flex;justify-content:center;gap:10px;margin-top:12px}
+textarea{width:100%;min-height:230px;border:2px solid #ddcfbd;border-radius:18px;padding:16px;font:18px "Trebuchet MS",Arial,sans-serif;resize:vertical}
+footer{text-align:center;padding:0 15px 28px;color:#806d5d;font-weight:700}
+.stage{opacity:0;transform-origin:center;transition:opacity .3s,transform .3s}.stage.show{opacity:1}.rope{stroke:#a9825d;stroke-width:7;stroke-linecap:round}.wood{stroke:#7b5a3e;stroke-width:15;stroke-linecap:round}.outline{stroke:#554940;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.confetti{position:fixed;z-index:20;pointer-events:none;font-size:25px;animation:fly 1.7s ease-out forwards}@keyframes fly{to{transform:translate(var(--x),var(--y)) rotate(600deg);opacity:0}}
+@media(max-width:850px){.theme-grid{grid-template-columns:repeat(2,1fr)}.game-layout{grid-template-columns:1fr}.art-card,.play-card{min-height:auto}.keyboard{grid-template-columns:repeat(7,1fr)}.brand h1{font-size:48px}.brand p{font-size:21px}}
+@media(max-width:520px){main{padding:6px 10px 25px}.panel{padding:18px;border-radius:22px}.theme-grid{gap:9px}.theme-card{min-height:115px}.theme-card b{font-size:21px}.theme-card .emoji{font-size:31px}.game-top{grid-template-columns:1fr 1fr}.theme-name{grid-column:1/-1;grid-row:1;text-align:center;margin-bottom:10px}.game-top .back{grid-row:2}.game-top .secondary{grid-row:2}.keyboard{grid-template-columns:repeat(6,1fr)}#art svg{height:310px}.brandmark{width:58px;height:58px}.brand h1{font-size:42px}.brand p{font-size:18px}}
+
+</style></head>
 <body>
 <header class="brand"><div class="brandmark">♡</div><div><h1><span id="pageTitle">Hangman</span></h1><p>Hug and Grow Learning Studio</p></div></header>
 <main>
@@ -29,4 +50,585 @@
 </section>
 </main>
 <footer>© 2026 Hug & Grow Learning Studio. All rights reserved.</footer>
-<script src="words.js"></script><script src="game.js"></script></body></html>
+<script>
+const THEMES={
+  "backtoschool": {
+    "name": "Back to School",
+    "emoji": "🎒 ✏️",
+    "colors": [
+      "#F7DFA1",
+      "#8E6A52"
+    ],
+    "character": "pencil",
+    "words": [
+      "PENCIL",
+      "ERASER",
+      "CRAYON",
+      "MARKER",
+      "PAPER",
+      "FOLDER",
+      "BACKPACK",
+      "TEACHER",
+      "STUDENT",
+      "SCHOOL",
+      "CLASSROOM",
+      "DESK",
+      "CHAIR",
+      "BOOK",
+      "LIBRARY",
+      "RECESS",
+      "LUNCH",
+      "RULER",
+      "SCISSORS",
+      "GLUE",
+      "NOTEBOOK",
+      "CALENDAR",
+      "COMPUTER",
+      "READING",
+      "WRITING",
+      "MATH",
+      "SCIENCE",
+      "ART",
+      "MUSIC",
+      "FRIEND"
+    ]
+  },
+  "fall": {
+    "name": "Fall",
+    "emoji": "🍂 🍎",
+    "colors": [
+      "#EBC79B",
+      "#A86643"
+    ],
+    "character": "scarecrow",
+    "words": [
+      "AUTUMN",
+      "LEAVES",
+      "ACORN",
+      "APPLE",
+      "ORCHARD",
+      "PUMPKIN",
+      "HARVEST",
+      "SCARECROW",
+      "HAYRIDE",
+      "CORN",
+      "SWEATER",
+      "JACKET",
+      "BREEZE",
+      "FOREST",
+      "MAPLE",
+      "OAK",
+      "RAKE",
+      "BASKET",
+      "FARM",
+      "CIDER",
+      "SUNFLOWER",
+      "SQUIRREL",
+      "PINECONE",
+      "FOOTBALL",
+      "SEPTEMBER",
+      "OCTOBER",
+      "NOVEMBER",
+      "CRUNCHY",
+      "GOLDEN",
+      "COZY"
+    ]
+  },
+  "halloween": {
+    "name": "Halloween",
+    "emoji": "🎃 👻",
+    "colors": [
+      "#F0B584",
+      "#815B82"
+    ],
+    "character": "ghost",
+    "words": [
+      "PUMPKIN",
+      "COSTUME",
+      "CANDY",
+      "GHOST",
+      "BAT",
+      "WITCH",
+      "BROOM",
+      "SPIDER",
+      "WEB",
+      "MONSTER",
+      "MUMMY",
+      "SKELETON",
+      "MASK",
+      "PARTY",
+      "TREAT",
+      "TRICK",
+      "HAUNTED",
+      "MOON",
+      "BLACK CAT",
+      "CAULDRON",
+      "CAPE",
+      "VAMPIRE",
+      "OWL",
+      "LANTERN",
+      "BOO",
+      "CORN MAZE",
+      "POTION",
+      "CREEPY",
+      "NIGHT",
+      "CANDY CORN"
+    ]
+  },
+  "thanksgiving": {
+    "name": "Thanksgiving",
+    "emoji": "🦃 🥧",
+    "colors": [
+      "#E5CFAD",
+      "#9A6A45"
+    ],
+    "character": "turkey",
+    "words": [
+      "TURKEY",
+      "THANKFUL",
+      "FAMILY",
+      "DINNER",
+      "FEAST",
+      "PIE",
+      "GRAVY",
+      "STUFFING",
+      "POTATO",
+      "CORN",
+      "HARVEST",
+      "AUTUMN",
+      "PUMPKIN",
+      "CRANBERRY",
+      "PARADE",
+      "NOVEMBER",
+      "TABLE",
+      "PLATE",
+      "FORK",
+      "NAPKIN",
+      "ROLLS",
+      "CARROTS",
+      "APPLE PIE",
+      "GATHER",
+      "SHARE",
+      "KINDNESS",
+      "FRIENDS",
+      "HOME",
+      "COOKING",
+      "GRATEFUL"
+    ]
+  },
+  "christmas": {
+    "name": "Christmas",
+    "emoji": "🎄 🎁",
+    "colors": [
+      "#CFE5D7",
+      "#A95E58"
+    ],
+    "character": "gingerbread",
+    "words": [
+      "CHRISTMAS",
+      "SANTA",
+      "REINDEER",
+      "SLEIGH",
+      "ELF",
+      "PRESENT",
+      "GIFT",
+      "TREE",
+      "ORNAMENT",
+      "STAR",
+      "LIGHTS",
+      "STOCKING",
+      "WREATH",
+      "CANDY CANE",
+      "GINGERBREAD",
+      "COOKIE",
+      "SNOW",
+      "BELLS",
+      "CAROL",
+      "CHIMNEY",
+      "NORTH POLE",
+      "RIBBON",
+      "HOLIDAY",
+      "DECEMBER",
+      "TOY",
+      "MITTENS",
+      "COCOA",
+      "FAMILY",
+      "CHEER",
+      "WORKSHOP"
+    ]
+  },
+  "winter": {
+    "name": "Winter",
+    "emoji": "❄️ ⛄",
+    "colors": [
+      "#C6E3F2",
+      "#6E9EB7"
+    ],
+    "character": "snowman",
+    "words": [
+      "WINTER",
+      "SNOW",
+      "SNOWMAN",
+      "SNOWFLAKE",
+      "MITTENS",
+      "SCARF",
+      "BOOTS",
+      "COAT",
+      "SLED",
+      "ICE",
+      "ICICLE",
+      "FROST",
+      "FREEZE",
+      "CHILLY",
+      "COLD",
+      "COCOA",
+      "BLANKET",
+      "PENGUIN",
+      "POLAR BEAR",
+      "SKATES",
+      "SKATING",
+      "SWEATER",
+      "HAT",
+      "FIREPLACE",
+      "JANUARY",
+      "FEBRUARY",
+      "FLURRY",
+      "SNOWBALL",
+      "IGLOO",
+      "BLIZZARD"
+    ]
+  },
+  "valentine": {
+    "name": "Valentine",
+    "emoji": "💗 💌",
+    "colors": [
+      "#F2CCD4",
+      "#B9677D"
+    ],
+    "character": "heart",
+    "words": [
+      "VALENTINE",
+      "HEART",
+      "LOVE",
+      "FRIEND",
+      "KINDNESS",
+      "CARD",
+      "FLOWER",
+      "ROSE",
+      "CHOCOLATE",
+      "CANDY",
+      "CUPID",
+      "FEBRUARY",
+      "PINK",
+      "RED",
+      "HUG",
+      "SMILE",
+      "SWEET",
+      "FRIENDSHIP",
+      "CARING",
+      "SHARE",
+      "KIND",
+      "HAPPY",
+      "LETTER",
+      "ENVELOPE",
+      "RIBBON",
+      "GIFT",
+      "HEARTS",
+      "BE MINE",
+      "XOXO",
+      "CELEBRATE"
+    ]
+  },
+  "stpatrick": {
+    "name": "St. Patrick",
+    "emoji": "☘️ 🌈",
+    "colors": [
+      "#D2E9C1",
+      "#5F9164"
+    ],
+    "character": "leprechaun",
+    "words": [
+      "SHAMROCK",
+      "GREEN",
+      "RAINBOW",
+      "GOLD",
+      "LEPRECHAUN",
+      "IRELAND",
+      "CLOVER",
+      "LUCKY",
+      "MARCH",
+      "POT OF GOLD",
+      "COINS",
+      "HAT",
+      "PARADE",
+      "DANCE",
+      "MUSIC",
+      "MAGIC",
+      "SPRING",
+      "TREASURE",
+      "HORSESHOE",
+      "JIG",
+      "IRISH",
+      "EMERALD",
+      "CASTLE",
+      "HARP",
+      "FLAG",
+      "FRIEND",
+      "CELEBRATE",
+      "LUCK",
+      "RAIN",
+      "BOOTS"
+    ]
+  },
+  "earthday": {
+    "name": "Earth Day",
+    "emoji": "🌎 🌱",
+    "colors": [
+      "#C8E7E7",
+      "#4F8B7B"
+    ],
+    "character": "earth",
+    "words": [
+      "EARTH",
+      "PLANET",
+      "RECYCLE",
+      "REUSE",
+      "REDUCE",
+      "NATURE",
+      "OCEAN",
+      "FOREST",
+      "TREE",
+      "FLOWER",
+      "GARDEN",
+      "WATER",
+      "CLEAN",
+      "GREEN",
+      "ENERGY",
+      "SOLAR",
+      "WIND",
+      "ANIMAL",
+      "HABITAT",
+      "COMPOST",
+      "TRASH",
+      "PARK",
+      "RIVER",
+      "BEACH",
+      "PLANT",
+      "SEED",
+      "APRIL",
+      "PROTECT",
+      "CONSERVE",
+      "ENVIRONMENT"
+    ]
+  },
+  "spring": {
+    "name": "Spring",
+    "emoji": "🌷 🐝",
+    "colors": [
+      "#DCECC8",
+      "#7BA069"
+    ],
+    "character": "flower",
+    "words": [
+      "SPRING",
+      "FLOWER",
+      "RAIN",
+      "RAINBOW",
+      "GARDEN",
+      "SEED",
+      "PLANT",
+      "BLOSSOM",
+      "BUTTERFLY",
+      "BEE",
+      "BIRD",
+      "NEST",
+      "PUDDLE",
+      "UMBRELLA",
+      "BOOTS",
+      "SUNSHINE",
+      "GRASS",
+      "TULIP",
+      "DAISY",
+      "CLOUD",
+      "WORM",
+      "LADYBUG",
+      "PICNIC",
+      "MARCH",
+      "APRIL",
+      "MAY",
+      "WARM",
+      "GROW",
+      "GREEN",
+      "BLOOM"
+    ]
+  },
+  "summer": {
+    "name": "Summer",
+    "emoji": "☀️ 🍉",
+    "colors": [
+      "#F7E0A0",
+      "#D48C53"
+    ],
+    "character": "sun",
+    "words": [
+      "SUMMER",
+      "SUN",
+      "BEACH",
+      "OCEAN",
+      "SAND",
+      "SWIM",
+      "POOL",
+      "VACATION",
+      "PICNIC",
+      "CAMP",
+      "CAMPING",
+      "SUNSCREEN",
+      "HAT",
+      "SHORTS",
+      "SANDALS",
+      "WATERMELON",
+      "LEMONADE",
+      "ICE CREAM",
+      "POPSICLE",
+      "SHELL",
+      "WAVES",
+      "SURF",
+      "JUNE",
+      "JULY",
+      "AUGUST",
+      "SUNSHINE",
+      "HOT",
+      "PALM TREE",
+      "KITE",
+      "ADVENTURE"
+    ]
+  }
+};
+</script>
+<script>
+
+let themeId=null, pool=[], answer="", guessed=new Set(), wrong=0, maxWrong=6, celebrating=false;
+const $=s=>document.querySelector(s);
+const home=$("#home"), game=$("#game"), customSetup=$("#customSetup"), grid=$("#themeGrid"), kb=$("#keyboard");
+
+function scaffold(inner){
+ return `<svg viewBox="0 0 420 430" aria-label="Cute hangman illustration">
+ <line class="wood" x1="55" y1="390" x2="180" y2="390"/><line class="wood" x1="105" y1="390" x2="105" y2="45"/>
+ <line class="wood" x1="105" y1="50" x2="300" y2="50"/><line class="wood" x1="105" y1="115" x2="170" y2="50"/>
+ <line class="rope" x1="295" y1="55" x2="295" y2="105"/><path d="M276 105 Q295 130 314 105" fill="none" class="rope"/>
+ ${inner}</svg>`;
+}
+const S=(n,x)=>`<g class="stage" data-stage="${n}">${x}</g>`;
+function face(cx,cy){return `<circle cx="${cx-13}" cy="${cy}" r="4" fill="#4c413a"/><circle cx="${cx+13}" cy="${cy}" r="4" fill="#4c413a"/><path d="M${cx-12} ${cy+16} Q${cx} ${cy+26} ${cx+12} ${cy+16}" fill="none" class="outline"/>`}
+function art(type){
+ if(type==="snowman") return scaffold(
+  S(1,`<circle cx="295" cy="315" r="68" fill="#fff" class="outline"/>`)+
+  S(2,`<circle cx="295" cy="225" r="55" fill="#fff" class="outline"/>`)+
+  S(3,`<circle cx="295" cy="145" r="46" fill="#fff" class="outline"/>`)+
+  S(4,`<path d="M245 225 L200 195 M345 225 L385 190" fill="none" stroke="#78583f" stroke-width="8" stroke-linecap="round"/>`)+
+  S(5,face(295,145)+`<path d="M295 153 l34 8 -34 8z" fill="#e99049"/><circle cx="295" cy="215" r="5"/><circle cx="295" cy="235" r="5"/>`)+
+  S(6,`<rect x="252" y="105" width="86" height="13" rx="5" fill="#5f806e"/><rect x="266" y="70" width="58" height="40" rx="7" fill="#5f806e"/><path d="M248 183 Q295 200 343 183" fill="none" stroke="#d47b72" stroke-width="15"/><path d="M330 188 l20 48" stroke="#d47b72" stroke-width="14"/>`));
+ if(type==="gingerbread") return scaffold(
+  S(1,`<circle cx="295" cy="155" r="48" fill="#bd7a48" class="outline"/>`)+
+  S(2,`<rect x="250" y="195" width="90" height="112" rx="42" fill="#bd7a48" class="outline"/>`)+
+  S(3,`<path d="M258 220 L205 260" stroke="#bd7a48" stroke-width="32" stroke-linecap="round" class="outline"/><path d="M332 220 L385 260" stroke="#bd7a48" stroke-width="32" stroke-linecap="round" class="outline"/>`)+
+  S(4,`<path d="M270 292 L245 365" stroke="#bd7a48" stroke-width="34" stroke-linecap="round" class="outline"/><path d="M320 292 L345 365" stroke="#bd7a48" stroke-width="34" stroke-linecap="round" class="outline"/>`)+
+  S(5,face(295,150)+`<circle cx="295" cy="225" r="7" fill="#d85858"/><circle cx="295" cy="255" r="7" fill="#6a9c77"/>`)+
+  S(6,`<path d="M260 185 Q295 205 330 185" fill="none" stroke="#fff5e8" stroke-width="8"/><path d="M225 250 q12 12 24 0 M341 250 q12 12 24 0 M240 345 q12 12 24 0 M326 345 q12 12 24 0" fill="none" stroke="#fff5e8" stroke-width="7"/>`));
+ if(type==="ghost") return scaffold(
+  S(1,`<circle cx="295" cy="170" r="62" fill="#fff" class="outline"/>`)+
+  S(2,`<path d="M235 170 L235 320 Q250 290 265 320 Q280 290 295 320 Q310 290 325 320 Q340 290 355 320 L355 170Z" fill="#fff" class="outline"/>`)+
+  S(3,`<path d="M240 215 Q195 235 210 275" fill="none" stroke="#fff" stroke-width="30" stroke-linecap="round" class="outline"/>`)+
+  S(4,`<path d="M350 215 Q390 235 375 275" fill="none" stroke="#fff" stroke-width="30" stroke-linecap="round" class="outline"/>`)+
+  S(5,face(295,165))+S(6,`<path d="M245 115 Q295 75 345 115" fill="#8b6aaa" class="outline"/><rect x="245" y="110" width="100" height="14" rx="7" fill="#8b6aaa"/>`));
+ if(type==="turkey") return scaffold(
+  S(1,`<circle cx="295" cy="260" r="68" fill="#9a633e" class="outline"/>`)+
+  S(2,`<circle cx="295" cy="170" r="43" fill="#9a633e" class="outline"/>`)+
+  S(3,`<circle cx="230" cy="250" r="48" fill="#d99b55" class="outline"/><circle cx="360" cy="250" r="48" fill="#c87355" class="outline"/><circle cx="245" cy="210" r="48" fill="#d4b45d" class="outline"/><circle cx="345" cy="210" r="48" fill="#d98a4d" class="outline"/>`)+
+  S(4,`<path d="M275 320 l-15 55 M315 320 l15 55" stroke="#c17a43" stroke-width="8"/><path d="M245 375 h30 M315 375 h30" stroke="#c17a43" stroke-width="8"/>`)+
+  S(5,face(295,165)+`<path d="M295 175 l25 12 -25 12z" fill="#e9a33f"/>`)+S(6,`<path d="M315 187 q20 20 4 38" fill="none" stroke="#c74e4e" stroke-width="8"/>`));
+ if(type==="heart") return scaffold(
+  S(1,`<path d="M295 330 C220 270 205 205 240 180 C270 158 295 185 295 205 C295 185 320 158 350 180 C385 205 370 270 295 330Z" fill="#e58aa2" class="outline"/>`)+
+  S(2,`<path d="M245 240 L205 280" stroke="#e58aa2" stroke-width="22" stroke-linecap="round" class="outline"/>`)+
+  S(3,`<path d="M345 240 L385 280" stroke="#e58aa2" stroke-width="22" stroke-linecap="round" class="outline"/>`)+
+  S(4,`<path d="M275 315 L255 370 M315 315 L335 370" stroke="#e58aa2" stroke-width="20" stroke-linecap="round" class="outline"/>`)+
+  S(5,face(295,240))+S(6,`<path d="M250 185 q45 -45 90 0" fill="none" stroke="#fff" stroke-width="8"/><circle cx="225" cy="140" r="12" fill="#e58aa2"/><circle cx="365" cy="125" r="9" fill="#e58aa2"/>`));
+ if(type==="earth") return scaffold(
+  S(1,`<circle cx="295" cy="235" r="95" fill="#78b9d1" class="outline"/>`)+
+  S(2,`<path d="M245 165 q35-30 55 5 l-12 28 -38 8z M320 230 q50-20 55 25 l-28 35 -32-12z M245 275 q30-15 45 12 l-18 30 -35-15z" fill="#79ad67"/>`)+
+  S(3,`<path d="M205 235 L175 270 M385 235 L410 270" stroke="#78b9d1" stroke-width="20" stroke-linecap="round" class="outline"/>`)+
+  S(4,`<path d="M270 320 L255 375 M320 320 L335 375" stroke="#78b9d1" stroke-width="20" stroke-linecap="round" class="outline"/>`)+
+  S(5,face(295,235))+S(6,`<path d="M235 135 q60-35 120 0" fill="none" stroke="#d9f0ff" stroke-width="8"/><path d="M345 150 q20-30 38-10 q-10 25-38 30z" fill="#79ad67"/>`));
+ if(type==="flower") return scaffold(
+  S(1,`<path d="M295 230 L295 365" stroke="#6c9e63" stroke-width="15" stroke-linecap="round"/>`)+
+  S(2,`<ellipse cx="260" cy="305" rx="38" ry="18" transform="rotate(25 260 305)" fill="#86b879" class="outline"/><ellipse cx="330" cy="330" rx="38" ry="18" transform="rotate(-25 330 330)" fill="#86b879" class="outline"/>`)+
+  S(3,`<circle cx="295" cy="190" r="38" fill="#e8a85c" class="outline"/>`)+
+  S(4,`<circle cx="295" cy="125" r="42" fill="#e996a8" class="outline"/><circle cx="355" cy="165" r="42" fill="#e996a8" class="outline"/><circle cx="335" cy="225" r="42" fill="#e996a8" class="outline"/><circle cx="255" cy="225" r="42" fill="#e996a8" class="outline"/><circle cx="235" cy="165" r="42" fill="#e996a8" class="outline"/>`)+
+  S(5,face(295,185))+S(6,`<path d="M270 120 q25-25 50 0" fill="none" stroke="#fff" stroke-width="7"/>`));
+ if(type==="sun") return scaffold(
+  S(1,`<circle cx="295" cy="225" r="78" fill="#f5c65b" class="outline"/>`)+
+  S(2,`<g stroke="#f5c65b" stroke-width="15" stroke-linecap="round"><path d="M295 110V75"/><path d="M295 340v35"/><path d="M180 225h-35"/><path d="M410 225h-35"/></g>`)+
+  S(3,`<g stroke="#f5c65b" stroke-width="15" stroke-linecap="round"><path d="M215 145l-28-28"/><path d="M375 145l28-28"/><path d="M215 305l-28 28"/><path d="M375 305l28 28"/></g>`)+
+  S(4,`<path d="M235 275 L205 325 M355 275 L385 325" stroke="#f5c65b" stroke-width="18" stroke-linecap="round"/>`)+
+  S(5,face(295,220))+S(6,`<path d="M250 180 q45-35 90 0" fill="none" stroke="#fff0bd" stroke-width="8"/>`));
+ if(type==="pencil") return scaffold(
+  S(1,`<rect x="260" y="145" width="70" height="175" rx="12" fill="#f0c84d" class="outline"/>`)+
+  S(2,`<path d="M260 145 L295 95 L330 145Z" fill="#e7c39d" class="outline"/><path d="M286 108 L295 95 L304 108Z" fill="#4d4540"/>`)+
+  S(3,`<rect x="260" y="305" width="70" height="35" rx="10" fill="#e68fa0" class="outline"/>`)+
+  S(4,`<path d="M260 220 L220 250 M330 220 L370 250" stroke="#f0c84d" stroke-width="18" stroke-linecap="round" class="outline"/>`)+
+  S(5,face(295,210))+S(6,`<path d="M275 270 q20 18 40 0" fill="none" stroke="#fff" stroke-width="6"/>`));
+ if(type==="scarecrow") return scaffold(
+  S(1,`<circle cx="295" cy="165" r="50" fill="#f1c89c" class="outline"/>`)+
+  S(2,`<rect x="245" y="210" width="100" height="110" rx="20" fill="#7e9a72" class="outline"/>`)+
+  S(3,`<path d="M250 225 L195 270 M340 225 L395 270" stroke="#d9a86d" stroke-width="20" stroke-linecap="round" class="outline"/>`)+
+  S(4,`<path d="M270 315 L250 375 M320 315 L340 375" stroke="#6e7892" stroke-width="24" stroke-linecap="round" class="outline"/>`)+
+  S(5,face(295,165)+`<path d="M280 185 q15 12 30 0" fill="none" stroke="#b36c63" stroke-width="5"/>`)+
+  S(6,`<path d="M235 125 Q295 75 355 125Z" fill="#b7834e" class="outline"/><rect x="230" y="120" width="130" height="15" rx="6" fill="#b7834e"/>`));
+ if(type==="leprechaun") return scaffold(
+  S(1,`<circle cx="295" cy="175" r="52" fill="#f2c7a5" class="outline"/>`)+
+  S(2,`<path d="M248 205 q47 70 94 0 q-8 90-47 90t-47-90" fill="#d77a45" class="outline"/>`)+
+  S(3,`<rect x="250" y="285" width="90" height="65" rx="20" fill="#5d9b68" class="outline"/>`)+
+  S(4,`<path d="M260 340 L245 385 M330 340 L345 385" stroke="#5d9b68" stroke-width="20" stroke-linecap="round"/>`)+
+  S(5,face(295,170))+S(6,`<rect x="245" y="95" width="100" height="22" rx="6" fill="#438557"/><rect x="265" y="55" width="60" height="55" rx="8" fill="#438557"/><rect x="283" y="91" width="25" height="20" fill="#e6c35c"/>`));
+ return scaffold(S(1,`<circle cx="295" cy="220" r="80" fill="#ddd" class="outline"/>`)+S(2,face(295,220)));
+}
+function showScreen(which){
+ home.classList.toggle("hidden",which!=="home"); game.classList.toggle("hidden",which!=="game"); customSetup.classList.toggle("hidden",which!=="custom");
+ window.scrollTo({top:0,behavior:"smooth"});
+}
+function buildGrid(){
+ Object.entries(THEMES).forEach(([id,t])=>{
+   const b=document.createElement("button"); b.className="theme-card"; b.style.background=t.colors[0];
+   b.innerHTML=`<span class="emoji">${t.emoji}</span><b>${t.name}</b>`;
+   b.onclick=()=>startTheme(id); grid.appendChild(b);
+ });
+ const c=document.createElement("button");c.className="theme-card";c.style.background="#e9dfdd";c.innerHTML=`<span class="emoji">✍️ ✨</span><b>Customize</b>`;c.onclick=()=>showScreen("custom");grid.appendChild(c);
+}
+function startTheme(id){
+ themeId=id;pool=THEMES[id].words;document.documentElement.style.setProperty("--accent",THEMES[id].colors[0]);document.documentElement.style.setProperty("--accent2",THEMES[id].colors[1]);
+ $("#themeName").textContent=THEMES[id].emoji+" "+THEMES[id].name;$("#art").innerHTML=art(THEMES[id].character);showScreen("game");newGame();
+}
+function clean(s){return s.toUpperCase().replace(/[^A-Z '\-]/g,"").trim()}
+function newGame(){if(!pool.length)return;answer=clean(pool[Math.floor(Math.random()*pool.length)]);guessed=new Set();wrong=0;celebrating=false;render()}
+function render(){
+ $("#word").textContent=[...answer].map(ch=>/[A-Z]/.test(ch)?(guessed.has(ch)?ch:"_"):ch).join(" ");
+ document.querySelectorAll("#art .stage").forEach(g=>g.classList.toggle("show",Number(g.dataset.stage)<=wrong));
+ $("#wrongCount").textContent=`Incorrect guesses: ${wrong} / ${maxWrong}`;
+ kb.innerHTML="";
+ for(const l of "ABCDEFGHIJKLMNOPQRSTUVWXYZ"){const b=document.createElement("button");b.className="key";b.textContent=l;b.disabled=guessed.has(l)||ended();if(guessed.has(l))b.classList.add(answer.includes(l)?"good":"bad");b.onclick=()=>guess(l);kb.appendChild(b)}
+ if(won()){document.querySelectorAll("#art .stage").forEach(g=>g.classList.add("show"));$("#status").textContent="🎉 You did it! Great job!";if(!celebrating){celebrating=true;celebrate()}}
+ else if(wrong>=maxWrong){$("#word").textContent=[...answer].join(" ");$("#status").textContent=`Nice try! The answer was ${answer}.`}
+ else $("#status").textContent="Choose a letter!";
+}
+function guess(l){if(guessed.has(l)||ended())return;guessed.add(l);if(!answer.includes(l))wrong++;render()}
+function won(){return answer&&[...answer].filter(ch=>/[A-Z]/.test(ch)).every(ch=>guessed.has(ch))}
+function ended(){return won()||wrong>=maxWrong}
+function celebrate(){for(let i=0;i<30;i++){let s=document.createElement("span");s.className="confetti";s.textContent=["✨","⭐","💗","🎉"][i%4];s.style.left=(20+Math.random()*60)+"vw";s.style.top="50vh";s.style.setProperty("--x",(Math.random()*600-300)+"px");s.style.setProperty("--y",(Math.random()*-520-80)+"px");document.body.appendChild(s);setTimeout(()=>s.remove(),1800)}}
+document.querySelectorAll("[data-home]").forEach(b=>b.onclick=()=>showScreen("home"));
+$("#newWord").onclick=newGame;
+$("#hint").onclick=()=>{if(ended())return;let a=[...new Set([...answer].filter(x=>/[A-Z]/.test(x)&&!guessed.has(x)))];if(a.length){guessed.add(a[Math.floor(Math.random()*a.length)]);render()}};
+$("#startCustom").onclick=()=>{pool=$("#customWords").value.split(/\n|,/).map(clean).filter(Boolean);if(!pool.length){alert("Please enter at least one word or phrase.");return}themeId="custom";document.documentElement.style.setProperty("--accent","#eadfdd");document.documentElement.style.setProperty("--accent2","#9a7d83");$("#themeName").textContent="✍️ Custom Game";$("#art").innerHTML=art("heart");showScreen("game");newGame()};
+document.addEventListener("keydown",e=>{if(!game.classList.contains("hidden")&&/^[a-zA-Z]$/.test(e.key))guess(e.key.toUpperCase())});
+buildGrid();
+
+</script></body></html>
