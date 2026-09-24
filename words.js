@@ -1,8 +1,13 @@
-const THEMES = {
-  "backtoschool": [
-    "Back to School",
-    "✏️",
-    [
+const THEMES={
+  "backtoschool": {
+    "name": "Back to School",
+    "emoji": "🎒 ✏️",
+    "colors": [
+      "#F7DFA1",
+      "#8E6A52"
+    ],
+    "character": "pencil",
+    "words": [
       "PENCIL",
       "ERASER",
       "CRAYON",
@@ -34,11 +39,16 @@ const THEMES = {
       "MUSIC",
       "FRIEND"
     ]
-  ],
-  "fall": [
-    "Fall",
-    "🍂",
-    [
+  },
+  "fall": {
+    "name": "Fall",
+    "emoji": "🍂 🍎",
+    "colors": [
+      "#EBC79B",
+      "#A86643"
+    ],
+    "character": "scarecrow",
+    "words": [
       "AUTUMN",
       "LEAVES",
       "ACORN",
@@ -70,11 +80,16 @@ const THEMES = {
       "GOLDEN",
       "COZY"
     ]
-  ],
-  "halloween": [
-    "Halloween",
-    "🎃",
-    [
+  },
+  "halloween": {
+    "name": "Halloween",
+    "emoji": "🎃 👻",
+    "colors": [
+      "#F0B584",
+      "#815B82"
+    ],
+    "character": "ghost",
+    "words": [
       "PUMPKIN",
       "COSTUME",
       "CANDY",
@@ -106,11 +121,16 @@ const THEMES = {
       "NIGHT",
       "CANDY CORN"
     ]
-  ],
-  "thanksgiving": [
-    "Thanksgiving",
-    "🦃",
-    [
+  },
+  "thanksgiving": {
+    "name": "Thanksgiving",
+    "emoji": "🦃 🥧",
+    "colors": [
+      "#E5CFAD",
+      "#9A6A45"
+    ],
+    "character": "turkey",
+    "words": [
       "TURKEY",
       "THANKFUL",
       "FAMILY",
@@ -142,11 +162,16 @@ const THEMES = {
       "COOKING",
       "GRATEFUL"
     ]
-  ],
-  "christmas": [
-    "Christmas",
-    "🍪",
-    [
+  },
+  "christmas": {
+    "name": "Christmas",
+    "emoji": "🎄 🎁",
+    "colors": [
+      "#CFE5D7",
+      "#A95E58"
+    ],
+    "character": "gingerbread",
+    "words": [
       "CHRISTMAS",
       "SANTA",
       "REINDEER",
@@ -178,11 +203,16 @@ const THEMES = {
       "CHEER",
       "WORKSHOP"
     ]
-  ],
-  "winter": [
-    "Winter",
-    "⛄",
-    [
+  },
+  "winter": {
+    "name": "Winter",
+    "emoji": "❄️ ⛄",
+    "colors": [
+      "#C6E3F2",
+      "#6E9EB7"
+    ],
+    "character": "snowman",
+    "words": [
       "WINTER",
       "SNOW",
       "SNOWMAN",
@@ -214,11 +244,16 @@ const THEMES = {
       "IGLOO",
       "BLIZZARD"
     ]
-  ],
-  "valentine": [
-    "Valentine's Day",
-    "💗",
-    [
+  },
+  "valentine": {
+    "name": "Valentine",
+    "emoji": "💗 💌",
+    "colors": [
+      "#F2CCD4",
+      "#B9677D"
+    ],
+    "character": "heart",
+    "words": [
       "VALENTINE",
       "HEART",
       "LOVE",
@@ -250,11 +285,16 @@ const THEMES = {
       "XOXO",
       "CELEBRATE"
     ]
-  ],
-  "stpatrick": [
-    "St. Patrick's Day",
-    "☘️",
-    [
+  },
+  "stpatrick": {
+    "name": "St. Patrick",
+    "emoji": "☘️ 🌈",
+    "colors": [
+      "#D2E9C1",
+      "#5F9164"
+    ],
+    "character": "leprechaun",
+    "words": [
       "SHAMROCK",
       "GREEN",
       "RAINBOW",
@@ -286,11 +326,16 @@ const THEMES = {
       "RAIN",
       "BOOTS"
     ]
-  ],
-  "earthday": [
-    "Earth Day",
-    "🌎",
-    [
+  },
+  "earthday": {
+    "name": "Earth Day",
+    "emoji": "🌎 🌱",
+    "colors": [
+      "#C8E7E7",
+      "#4F8B7B"
+    ],
+    "character": "earth",
+    "words": [
       "EARTH",
       "PLANET",
       "RECYCLE",
@@ -322,11 +367,16 @@ const THEMES = {
       "CONSERVE",
       "ENVIRONMENT"
     ]
-  ],
-  "spring": [
-    "Spring",
-    "🌼",
-    [
+  },
+  "spring": {
+    "name": "Spring",
+    "emoji": "🌷 🐝",
+    "colors": [
+      "#DCECC8",
+      "#7BA069"
+    ],
+    "character": "flower",
+    "words": [
       "SPRING",
       "FLOWER",
       "RAIN",
@@ -358,11 +408,16 @@ const THEMES = {
       "GREEN",
       "BLOOM"
     ]
-  ],
-  "summer": [
-    "Summer",
-    "🍦",
-    [
+  },
+  "summer": {
+    "name": "Summer",
+    "emoji": "☀️ 🍉",
+    "colors": [
+      "#F7E0A0",
+      "#D48C53"
+    ],
+    "character": "sun",
+    "words": [
       "SUMMER",
       "SUN",
       "BEACH",
@@ -394,5 +449,5 @@ const THEMES = {
       "KITE",
       "ADVENTURE"
     ]
-  ]
+  }
 };

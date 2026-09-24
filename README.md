@@ -1,18 +1,23 @@
-# Hug & Grow Seasonal Build-a-Character Word Game
+# Hug & Grow Themed Hangman v2
 
-A kid-friendly Hangman-style game that builds seasonal characters instead of a gallows.
+## Included
+- Theme-selection home page styled to match the Hug & Grow Wordle look
+- 11 themes × 30 ready-to-use words/phrases
+- Custom word/phrase mode
+- Cute hangman scaffold
+- Six-stage SVG character artwork for every theme
+- Mouse, touch, Promethean board, and physical keyboard support
+- Responsive layout for laptop/tablet/phone
+- No image assets required; artwork is drawn by the browser
 
-## GitHub Pages
-1. Create a new GitHub repository.
-2. Upload `index.html`, `style.css`, `game.js`, and `words.js`.
-3. Commit the files.
-4. Open **Settings → Pages**.
-5. Under **Build and deployment**, choose **Deploy from a branch**.
-6. Choose `main` and `/ (root)`, then Save.
-7. GitHub will provide the public game URL.
+## Upload to GitHub
+Upload these four files to the root of your repository:
+- index.html
+- style.css
+- game.js
+- words.js
 
-## Editing words
-Open `words.js`. Each theme contains 30 words/phrases.
+Then enable GitHub Pages: Settings → Pages → Deploy from a branch → main → /(root).
 
-## Customize
-Choose **Customize**, enter one word or phrase per line, and click **Use My Words**.
+## Edit words
+Open `words.js`. Each theme's `words` array contains 30 games.

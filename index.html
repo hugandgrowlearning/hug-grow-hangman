@@ -1,13 +1,32 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Seasonal Build-a-Character Word Game</title><link rel="stylesheet" href="style.css"></head>
-<body><header><h1>Build-a-Character Word Game</h1><p class="subtitle">Guess the word before the character is complete!</p></header>
-<main class="wrap"><div id="themes" class="themes"></div>
-<section id="customBox" class="custom"><b>Customize your game</b><p>Enter words or short phrases, one per line.</p>
-<textarea id="customWords" placeholder="FINE MOTOR&#10;HANDWRITING&#10;SCISSORS"></textarea>
-<div class="controls"><button class="mainbtn" id="useCustom">Use My Words</button></div></section>
-<div class="card"><div class="game"><div class="character"><div id="figure" class="figure">⛄</div></div>
-<div><div id="themeTitle" class="small"></div><div id="word" class="word"></div><div id="status" class="status"></div>
-<div id="keyboard" class="keyboard"></div><div class="controls"><button id="newGame" class="mainbtn">New Word</button><button id="hint" class="mainbtn secondary">Give Me a Letter</button></div>
-<p class="small">6 incorrect guesses allowed • Works with mouse, touch, and keyboard</p></div></div></div></main>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hangman | Hug & Grow Learning Studio</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="brand"><div class="brandmark">♡</div><div><h1><span id="pageTitle">Hangman</span></h1><p>Hug and Grow Learning Studio</p></div></header>
+<main>
+<section id="home" class="panel">
+  <h2>Choose a Theme</h2><p class="lead">Each theme includes 30 games. Choose a theme to start playing!</p>
+  <div id="themeGrid" class="theme-grid"></div>
+  <div class="tagline">Play · Learn · Grow 💗</div>
+</section>
+
+<section id="customSetup" class="panel hidden">
+  <button class="back" data-home>← Back to Themes</button><h2>Customize Your Game</h2>
+  <p class="lead">Enter your own words or short phrases, one per line.</p>
+  <textarea id="customWords" placeholder="FINE MOTOR&#10;HANDWRITING&#10;SCISSORS"></textarea>
+  <div class="row"><button id="startCustom" class="primary">Start Custom Game</button></div>
+</section>
+
+<section id="game" class="panel hidden">
+  <div class="game-top"><button class="back" data-home>← Themes</button><div id="themeName" class="theme-name"></div><button id="newWord" class="secondary">New Word</button></div>
+  <div class="game-layout">
+    <div class="art-card"><div id="art"></div><div id="wrongCount" class="wrong-count"></div></div>
+    <div class="play-card">
+      <div id="word" class="word"></div><div id="status" class="status">Choose a letter!</div>
+      <div id="keyboard" class="keyboard"></div>
+      <div class="row"><button id="hint" class="secondary">Give Me a Letter</button></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>© 2026 Hug & Grow Learning Studio. All rights reserved.</footer>
 <script src="words.js"></script><script src="game.js"></script></body></html>
