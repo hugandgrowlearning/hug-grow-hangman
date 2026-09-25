@@ -947,7 +947,7 @@ function render(){
  $("#wrongCount").textContent=`Incorrect guesses: ${wrong} / ${maxWrong}`;
  kb.innerHTML="";
  for(const l of "ABCDEFGHIJKLMNOPQRSTUVWXYZ"){const b=document.createElement("button");b.className="key";b.textContent=l;b.disabled=guessed.has(l)||ended();if(guessed.has(l))b.classList.add(answer.includes(l)?"good":"bad");b.onclick=()=>guess(l);kb.appendChild(b)}
- if(won()){document.querySelectorAll("#art .stage").forEach(g=>g.classList.add("show"));$("#status").textContent="🎉 You did it! Great job!";if(!celebrating){celebrating=true;wordFireworks()}}
+ if(won()){document.querySelectorAll("#art .stage").forEach(g=>g.classList.add("show"));$("#status").textContent="🎉 You did it! Great job!";if(!celebrating){celebrating=true;winSound();wordFireworks()}}
  else if(wrong>=maxWrong){$("#word").textContent=[...answer].join(" ");$("#status").textContent=`Nice try! The answer was ${answer}.`}
  else $("#status").textContent="Choose a letter!";
 }
@@ -964,7 +964,19 @@ function wrongEffect(){
  count.classList.add("bump");card.classList.add("fail-flash");
  tone(180,.13,"triangle",.045);setTimeout(()=>tone(130,.16,"triangle",.035),95);
 }
-function winSound(){tone(523,.13,"sine",.035);setTimeout(()=>tone(659,.13,"sine",.035),120);setTimeout(()=>tone(784,.24,"sine",.04),240)}
+function winSound(){
+  // Self-contained celebration melody using the same Web Audio approach
+  // already used successfully by the incorrect-guess sound.
+  const notes=[
+    [523.25,0,.18,"sine",.10],
+    [659.25,110,.18,"sine",.11],
+    [783.99,220,.20,"sine",.12],
+    [1046.50,350,.38,"triangle",.13]
+  ];
+  notes.forEach(([f,delay,dur,type,vol])=>{
+    setTimeout(()=>tone(f,dur,type,vol),delay);
+  });
+}
 function wordFireworks(){
  const word=document.getElementById("word");
  if(!word)return;
