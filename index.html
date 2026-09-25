@@ -693,54 +693,60 @@ if(type==="heart") return scaffold(
   S(5,`<path d="M270 278 L250 345" fill="none" stroke="#4d4540" stroke-width="8" stroke-linecap="round"/>`)+
   S(6,`<path d="M320 278 L340 345" fill="none" stroke="#4d4540" stroke-width="8" stroke-linecap="round"/>`));
 if(type==="flower") return scaffold(
-  /* Spring frog: head → face → body → left arm → right arm → two legs */
-  S(1,`<path d="M246 153
-       C235 137 237 111 253 99
-       C269 87 291 94 296 111
-       C303 96 326 89 342 101
-       C358 113 359 139 346 154
-       C358 168 353 197 337 211
-       C316 229 274 229 253 211
-       C237 197 233 170 246 153Z"
-       fill="#9ed34f" class="outline"/>`)+
-  S(2,`<ellipse cx="268" cy="126" rx="21" ry="25" fill="#fffdf2" class="outline"/>
-       <ellipse cx="324" cy="126" rx="21" ry="25" fill="#fffdf2" class="outline"/>
-       <ellipse cx="270" cy="128" rx="12" ry="16" fill="#493326"/>
-       <ellipse cx="322" cy="128" rx="12" ry="16" fill="#493326"/>
-       <circle cx="275" cy="122" r="4" fill="#fff"/>
-       <circle cx="327" cy="122" r="4" fill="#fff"/>
-       <circle cx="286" cy="159" r="3.5" fill="#50642f"/>
-       <circle cx="306" cy="159" r="3.5" fill="#50642f"/>
-       <circle cx="257" cy="170" r="9" fill="#f39a92" opacity=".9"/>
-       <circle cx="335" cy="170" r="9" fill="#f39a92" opacity=".9"/>
-       <path d="M271 174 Q296 198 321 174 Q316 207 296 208 Q276 207 271 174Z"
-       fill="#493326" class="outline happy-mouth"/>
-       <path d="M281 196 Q296 184 311 196 Q303 205 296 205 Q289 205 281 196Z"
-       fill="#f58d83" class="happy-mouth"/>
-       <path d="M276 193 Q296 177 316 193" fill="none" class="sad-mouth"/>`)+
-  S(3,`<ellipse cx="296" cy="286" rx="60" ry="78" fill="#9ed34f" class="outline"/>
-       <ellipse cx="296" cy="295" rx="39" ry="54" fill="#fff0bd" class="outline"/>
-       <path d="M254 224 Q296 241 338 224" fill="none" stroke="#fff0bd" stroke-width="13" stroke-linecap="round"/>`)+
-  S(4,`<path d="M252 260 Q226 280 220 326 Q224 344 241 334 Q251 322 260 300"
-       fill="#9ed34f" class="outline"/>
-       <circle cx="222" cy="335" r="9" fill="#9ed34f" class="outline"/>
-       <circle cx="237" cy="340" r="9" fill="#9ed34f" class="outline"/>
-       <circle cx="250" cy="334" r="9" fill="#9ed34f" class="outline"/>`)+
-  S(5,`<path d="M340 260 Q366 280 372 326 Q368 344 351 334 Q341 322 332 300"
-       fill="#9ed34f" class="outline"/>
-       <circle cx="370" cy="335" r="9" fill="#9ed34f" class="outline"/>
-       <circle cx="355" cy="340" r="9" fill="#9ed34f" class="outline"/>
-       <circle cx="342" cy="334" r="9" fill="#9ed34f" class="outline"/>`)+
-  S(6,`<path d="M263 326 Q232 330 207 356 Q192 375 214 383 Q246 389 275 360 Q284 350 286 333Z"
-       fill="#9ed34f" class="outline"/>
-       <circle cx="224" cy="351" r="8" fill="#78ad3d"/>
-       <circle cx="246" cy="342" r="7" fill="#78ad3d"/>
-       <path d="M329 326 Q360 330 385 356 Q400 375 378 383 Q346 389 317 360 Q308 350 306 333Z"
-       fill="#9ed34f" class="outline"/>
-       <circle cx="368" cy="351" r="8" fill="#78ad3d"/>
-       <circle cx="346" cy="342" r="7" fill="#78ad3d"/>
-       <path d="M208 380 q10 12 21 0 m-2 3 q10 12 21 0 M384 380 q-10 12-21 0 m2 3 q-10 12-21 0"
-       fill="none" stroke="#4c6d2e" stroke-width="5" stroke-linecap="round"/>`));
+  /* Spring girl: head/hair → face → spring outfit → one arm/flower → other arm → legs */
+  S(1,`<circle cx="295" cy="151" r="48" fill="#ffd7b0" class="outline"/>
+       <path d="M248 151 Q242 105 267 91 Q294 72 323 91 Q348 105 342 151
+       Q328 128 315 119 Q308 143 294 126 Q281 144 270 120 Q258 131 248 151Z"
+       fill="#9a6037" class="outline"/>
+       <path d="M251 118 Q229 106 221 126 Q215 145 235 153 Q245 154 253 144"
+       fill="#9a6037" class="outline"/>
+       <path d="M339 118 Q361 106 369 126 Q375 145 355 153 Q345 154 337 144"
+       fill="#9a6037" class="outline"/>
+       <g fill="#f59aa9" stroke="#70462f" stroke-width="3">
+         <circle cx="246" cy="117" r="8"/><circle cx="238" cy="125" r="8"/><circle cx="246" cy="133" r="8"/><circle cx="254" cy="125" r="8"/>
+         <circle cx="344" cy="117" r="8"/><circle cx="336" cy="125" r="8"/><circle cx="344" cy="133" r="8"/><circle cx="352" cy="125" r="8"/>
+       </g>
+       <circle cx="246" cy="125" r="4" fill="#f6c84f"/><circle cx="344" cy="125" r="4" fill="#f6c84f"/>`)+
+  S(2,`<ellipse cx="278" cy="155" rx="6" ry="9" fill="#513629"/>
+       <ellipse cx="312" cy="155" rx="6" ry="9" fill="#513629"/>
+       <circle cx="280" cy="152" r="2" fill="#fff"/><circle cx="314" cy="152" r="2" fill="#fff"/>
+       <circle cx="264" cy="174" r="8" fill="#f4a6a1" opacity=".75"/>
+       <circle cx="326" cy="174" r="8" fill="#f4a6a1" opacity=".75"/>
+       <path d="M280 174 Q295 191 310 174 Q307 198 295 199 Q283 198 280 174Z"
+       fill="#7a392e" class="outline happy-mouth"/>
+       <path d="M286 190 Q295 184 304 190" fill="none" stroke="#f58e88" stroke-width="6" class="happy-mouth"/>
+       <path d="M281 189 Q295 177 309 189" class="sad-mouth"/>`)+
+  S(3,`<path d="M260 203 Q295 190 330 203 L337 258 L253 258Z"
+       fill="#fffaf0" class="outline"/>
+       <path d="M276 202 Q295 221 314 202" fill="none" stroke="#70462f" stroke-width="4"/>
+       <path d="M252 253 Q295 240 338 253
+       Q362 292 374 329
+       Q353 346 332 337
+       Q314 354 295 342
+       Q276 354 258 337
+       Q237 346 216 329
+       Q228 292 252 253Z"
+       fill="#f59aa9" class="outline"/>
+       <path d="M255 257 Q295 270 335 257" fill="none" stroke="#cf687b" stroke-width="7"/>
+       <g fill="#fff7d9" stroke="#e6b74c" stroke-width="2">
+         <circle cx="250" cy="291" r="6"/><circle cx="283" cy="307" r="6"/><circle cx="318" cy="286" r="6"/><circle cx="342" cy="316" r="6"/>
+       </g>
+       <g fill="#f1c94f">
+         <circle cx="250" cy="291" r="2.5"/><circle cx="283" cy="307" r="2.5"/><circle cx="318" cy="286" r="2.5"/><circle cx="342" cy="316" r="2.5"/>
+       </g>`)+
+  S(4,`<path d="M258 216 Q232 225 211 247" fill="none" stroke="#ffd7b0" stroke-width="15" stroke-linecap="round" class="outline"/>
+       <path d="M209 247 L202 214" stroke="#5b8f45" stroke-width="6" stroke-linecap="round"/>
+       <g transform="translate(201 207)" fill="#fffdf4" stroke="#70462f" stroke-width="2.5">
+         <circle cx="0" cy="-10" r="9"/><circle cx="10" cy="0" r="9"/><circle cx="0" cy="10" r="9"/><circle cx="-10" cy="0" r="9"/>
+         <circle cx="0" cy="0" r="6" fill="#f3c54e"/>
+       </g>`)+
+  S(5,`<path d="M332 216 Q356 226 378 246" fill="none" stroke="#ffd7b0" stroke-width="15" stroke-linecap="round" class="outline"/>
+       <circle cx="381" cy="248" r="8" fill="#ffd7b0" class="outline"/>`)+
+  S(6,`<path d="M274 337 L266 382" stroke="#ffd7b0" stroke-width="17" stroke-linecap="round" class="outline"/>
+       <path d="M316 337 L330 376" stroke="#ffd7b0" stroke-width="17" stroke-linecap="round" class="outline"/>
+       <path d="M253 383 Q267 371 282 383 Q280 397 259 398 Q249 394 253 383Z" fill="#ee8797" class="outline"/>
+       <path d="M318 377 Q334 365 348 378 Q346 393 326 394 Q316 389 318 377Z" fill="#ee8797" class="outline"/>
+       <path d="M261 363 L272 363 M322 358 L335 354" stroke="#fffaf0" stroke-width="8"/>`));
 if(type==="summerboy") return scaffold(
   S(1,`<circle cx="295" cy="150" r="46" fill="#f1bd8f" class="outline"/>
        <path d="M251 145 q-2-38 23-49 q10-15 23-4 q16-13 28 1 q27 10 15 52
@@ -780,12 +786,65 @@ if(type==="summerboy") return scaffold(
  S(1,`<path d="M244 132 Q254 82 295 78 Q336 82 346 132Z" fill="#c99755" class="outline"/><path d="M222 132 Q295 116 368 132 Q365 151 295 151 Q225 151 222 132Z" fill="#d6a75f" class="outline"/><path d="M252 118 Q295 128 338 118" fill="none" stroke="#8f6742" stroke-width="8"/>`)+
  S(2,`<circle cx="295" cy="184" r="48" fill="#f1c89c" class="outline"/>`)+S(3,face(295,184))+S(4,`<path d="M251 228 Q295 215 339 228 L348 318 Q295 334 242 318Z" fill="#7e9a72" class="outline"/><path d="M255 250 L335 300 M335 250 L255 300" stroke="#e6c46b" stroke-width="5" stroke-dasharray="9 8"/>`)+S(5,`<path d="M247 244 L198 278 M343 244 L392 278" stroke="#d9a86d" stroke-width="18" class="outline"/>`)+S(6,`<path d="M270 316 L250 374 M320 316 L340 374" stroke="#6e7892" stroke-width="23"/>`));
 if(type==="leprechaun") return scaffold(
-  S(1,`<circle cx="295" cy="175" r="52" fill="#f2c7a5" class="outline"/>`)+
-  S(2,`<path d="M248 205 q47 70 94 0 q-8 90-47 90t-47-90" fill="#d77a45" class="outline"/>`)+
-  S(3,`<rect x="250" y="285" width="90" height="65" rx="20" fill="#5d9b68" class="outline"/>`)+
-  S(4,`<path d="M260 340 L245 385 M330 340 L345 385" stroke="#5d9b68" stroke-width="20" stroke-linecap="round"/>`)+
-  S(5,face(295,170))+S(6,`<rect x="245" y="95" width="100" height="22" rx="6" fill="#438557"/><rect x="265" y="55" width="60" height="55" rx="8" fill="#438557"/><rect x="283" y="91" width="25" height="20" fill="#e6c35c"/>`));
- if(type==="stickman") return scaffold(
+  /* St. Patrick: hat/head/hair → face → outfit → shamrock arm → other arm → dancing legs */
+  S(1,`<circle cx="295" cy="167" r="47" fill="#ffd2a8" class="outline"/>
+       <path d="M250 164 Q245 126 264 112 Q294 91 326 112 Q345 126 340 164
+       Q327 145 317 137 Q306 157 295 139 Q283 158 272 137 Q261 146 250 164Z"
+       fill="#ef7d24" class="outline"/>
+       <path d="M245 142 Q230 136 226 153 Q224 170 243 176" fill="#ef7d24" class="outline"/>
+       <path d="M345 142 Q360 136 364 153 Q366 170 347 176" fill="#ef7d24" class="outline"/>
+       <path d="M248 123 Q249 76 268 65 Q295 51 322 65 Q341 76 342 123Z"
+       fill="#18823b" class="outline"/>
+       <path d="M225 120 Q295 102 365 120 Q360 141 295 141 Q230 141 225 120Z"
+       fill="#18823b" class="outline"/>
+       <path d="M250 108 L340 108" stroke="#105f31" stroke-width="10"/>
+       <rect x="281" y="98" width="29" height="23" rx="3" fill="#f5bb3d" class="outline"/>
+       <rect x="288" y="104" width="15" height="11" rx="2" fill="#18823b"/>
+       <g transform="translate(340 91)" fill="#8ac63f" stroke="#365d26" stroke-width="3">
+         <circle cx="-7" cy="-6" r="8"/><circle cx="7" cy="-6" r="8"/>
+         <circle cx="-7" cy="7" r="8"/><circle cx="7" cy="7" r="8"/>
+         <path d="M0 10 L-4 24" fill="none"/>
+       </g>`)+
+  S(2,`<ellipse cx="278" cy="166" rx="6" ry="9" fill="#4d3427"/>
+       <ellipse cx="312" cy="166" rx="6" ry="9" fill="#4d3427"/>
+       <circle cx="280" cy="163" r="2" fill="#fff"/><circle cx="314" cy="163" r="2" fill="#fff"/>
+       <circle cx="263" cy="184" r="8" fill="#f29c91" opacity=".75"/>
+       <circle cx="327" cy="184" r="8" fill="#f29c91" opacity=".75"/>
+       <path d="M279 184 Q295 202 311 184 Q308 207 295 208 Q282 207 279 184Z"
+       fill="#843c31" class="outline happy-mouth"/>
+       <path d="M285 199 Q295 192 305 199" fill="none" stroke="#f58e88" stroke-width="6" class="happy-mouth"/>
+       <path d="M281 200 Q295 187 309 200" class="sad-mouth"/>`)+
+  S(3,`<path d="M253 218 Q295 201 337 218 L349 307 Q295 326 241 307Z"
+       fill="#16823b" class="outline"/>
+       <path d="M270 219 L283 241 L295 226 L307 241 L320 219" fill="#fff8e8" class="outline"/>
+       <path d="M271 224 L254 251 M319 224 L336 251" stroke="#f0b93f" stroke-width="6"/>
+       <path d="M275 241 Q295 225 315 241 Q310 258 295 250 Q280 258 275 241Z"
+       fill="#82bd3b" class="outline"/>
+       <circle cx="295" cy="268" r="4" fill="#f5c64a"/>
+       <circle cx="295" cy="286" r="4" fill="#f5c64a"/>
+       <path d="M249 299 L341 299" stroke="#68452e" stroke-width="9"/>
+       <rect x="283" y="290" width="24" height="19" rx="2" fill="#f5bb3d" class="outline"/>
+       <rect x="289" y="295" width="12" height="9" fill="#16823b"/>`)+
+  S(4,`<path d="M249 237 Q220 247 201 271" fill="none" stroke="#16823b" stroke-width="22" stroke-linecap="round" class="outline"/>
+       <circle cx="198" cy="274" r="9" fill="#ffd2a8" class="outline"/>
+       <path d="M197 272 L188 230" stroke="#438236" stroke-width="6" stroke-linecap="round"/>
+       <g transform="translate(185 221)" fill="#7fbd3d" stroke="#365d26" stroke-width="3">
+         <circle cx="-9" cy="-7" r="11"/><circle cx="9" cy="-7" r="11"/>
+         <circle cx="-9" cy="10" r="11"/><circle cx="9" cy="10" r="11"/>
+       </g>`)+
+  S(5,`<path d="M341 237 Q370 247 390 270" fill="none" stroke="#16823b" stroke-width="22" stroke-linecap="round" class="outline"/>
+       <circle cx="393" cy="272" r="9" fill="#ffd2a8" class="outline"/>`)+
+  S(6,`<path d="M272 307 L267 357" stroke="#ffd2a8" stroke-width="17" stroke-linecap="round" class="outline"/>
+       <path d="M317 307 L344 344" stroke="#ffd2a8" stroke-width="17" stroke-linecap="round" class="outline"/>
+       <path d="M260 332 L273 332 M260 342 L273 342 M329 326 L340 318 M336 335 L347 327"
+       stroke="#fff8e8" stroke-width="7"/>
+       <path d="M249 358 Q268 346 284 359 Q281 376 256 377 Q245 372 249 358Z"
+       fill="#6f482c" class="outline"/>
+       <path d="M337 344 Q352 329 368 340 Q369 357 350 367 Q338 363 337 344Z"
+       fill="#6f482c" class="outline"/>
+       <rect x="258" y="354" width="16" height="11" rx="2" fill="#f5bb3d" class="outline"/>
+       <rect x="347" y="340" width="15" height="11" rx="2" fill="#f5bb3d" class="outline"/>`));
+if(type==="stickman") return scaffold(
   S(1,`<circle cx="295" cy="155" r="42" fill="none" stroke="#4d4540" stroke-width="7"/>`)+
   S(2,`<path d="M295 197 L295 290" fill="none" stroke="#4d4540" stroke-width="7" stroke-linecap="round"/>`)+
   S(3,`<path d="M295 220 L245 255" fill="none" stroke="#4d4540" stroke-width="7" stroke-linecap="round"/>`)+
@@ -796,7 +855,7 @@ if(type==="leprechaun") return scaffold(
 }
 
 function alignCharacterToLine(type){
- const offsets={snowman:-6,gingerbread:-13,ghost:-3,turkey:-9,heart:-8,earth:-35,flower:11,pencil:10,scarecrow:27,leprechaun:50,summerboy:4,stickman:-8,sun:-42};
+ const offsets={snowman:-6,gingerbread:-13,ghost:-3,turkey:-9,heart:-8,earth:-35,flower:14,pencil:10,scarecrow:27,leprechaun:40,summerboy:4,stickman:-8,sun:-42};
  const dy=offsets[type]||0;
  document.querySelectorAll("#art svg .stage").forEach(g=>g.setAttribute("transform",`translate(0 ${dy})`));
 }
