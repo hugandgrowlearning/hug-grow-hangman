@@ -987,8 +987,8 @@ function render(){
  $("#wrongCount").textContent=`Incorrect guesses: ${wrong} / ${maxWrong}`;
  kb.innerHTML="";
  for(const l of "ABCDEFGHIJKLMNOPQRSTUVWXYZ"){const b=document.createElement("button");b.className="key";b.textContent=l;b.disabled=guessed.has(l)||ended();if(guessed.has(l))b.classList.add(answer.includes(l)?"good":"bad");b.onclick=()=>guess(l);kb.appendChild(b)}
- if(won()){document.querySelectorAll("#art .stage").forEach(g=>g.classList.add("show"));$("#status").textContent="🎉 You did it! Great job!";if(!celebrating){celebrating=true;winSound();wordFireworks()}}
- else if(wrong>=maxWrong){$("#word").textContent=[...answer].join(" ");$("#status").textContent=`Nice try! The answer is ${answer}.`}
+ if(won()){document.querySelectorAll("#art .stage").forEach(g=>g.classList.add("show"));$("#status").textContent="🎉 You did it! Great job!";if(themeId==="custom")$("#customWords").value="";if(!celebrating){celebrating=true;winSound();wordFireworks()}}
+ else if(wrong>=maxWrong){$("#word").textContent=[...answer].join(" ");$("#status").textContent=`Nice try! The answer is ${answer}.`;if(themeId==="custom")$("#customWords").value=""}
  else $("#status").textContent="Choose a letter!";
 }
 function tone(freq,duration=.12,type="sine",volume=.035){
