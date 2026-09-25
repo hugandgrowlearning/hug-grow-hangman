@@ -317,7 +317,7 @@ const THEMES={
       "#CFE5D7",
       "#A95E58"
     ],
-    "character": "gingerbread",
+    "character": "santa",
     "words": [
       "CHRISTMAS",
       "SANTA",
@@ -629,7 +629,54 @@ function art(type){
   S(5,`<path d="M245 225 L200 195 M345 225 L385 190" fill="none" stroke="#78583f" stroke-width="8" stroke-linecap="round"/>`)+
   S(4,face(295,145)+`<path d="M295 153 l34 8 -34 8z" fill="#e99049"/><circle cx="295" cy="215" r="5"/><circle cx="295" cy="235" r="5"/>`)+
   S(6,`<rect x="252" y="105" width="86" height="13" rx="5" fill="#5f806e"/><rect x="266" y="70" width="58" height="40" rx="7" fill="#5f806e"/><path d="M248 183 Q295 200 343 183" fill="none" stroke="#d47b72" stroke-width="15"/><path d="M330 188 l20 48" stroke="#d47b72" stroke-width="14"/>`));
- if(type==="gingerbread") return scaffold(
+ if(type==="santa") return scaffold(
+  /* Christmas Santa: head + hat → face/beard → body → gift arm → other arm → legs */
+  S(1,`<circle cx="295" cy="160" r="48" fill="#ffd3ad" class="outline"/>
+       <path d="M250 132 Q260 78 303 69 Q337 67 354 100 Q360 111 357 125
+       Q336 103 305 101 Q275 102 250 132Z" fill="#e94335" class="outline"/>
+       <path d="M242 116 Q295 94 348 116 L346 137 Q295 120 244 137Z"
+       fill="#e94335" stroke="none"/>
+       <path d="M240 124
+       Q252 112 265 117
+       Q279 106 294 114
+       Q309 106 323 117
+       Q337 112 350 124
+       Q348 139 340 149
+       Q327 143 315 148
+       Q295 140 275 148
+       Q262 143 249 149
+       Q242 139 240 124Z"
+       fill="#fffaf0" class="outline"/>
+       <circle cx="354" cy="105" r="18" fill="#fffaf0" class="outline"/>`)+
+  S(2,`<ellipse cx="278" cy="156" rx="6" ry="9" fill="#493328"/>
+       <ellipse cx="312" cy="156" rx="6" ry="9" fill="#493328"/>
+       <circle cx="280" cy="153" r="2" fill="#fff"/><circle cx="314" cy="153" r="2" fill="#fff"/>
+       <circle cx="295" cy="171" r="10" fill="#ef8074"/>
+       <circle cx="263" cy="176" r="8" fill="#f4a39a" opacity=".8"/><circle cx="327" cy="176" r="8" fill="#f4a39a" opacity=".8"/>
+       <path d="M254 181 Q265 167 282 179 Q295 168 308 179 Q325 167 336 181
+       Q330 199 314 197 Q309 222 295 228 Q281 222 276 197 Q260 199 254 181Z"
+       fill="#fffaf0" class="outline"/>
+       <path d="M283 193 Q295 205 307 193" fill="none" class="outline happy-mouth"/>
+       <path d="M283 204 Q295 192 307 204" class="sad-mouth"/>`)+
+  S(3,`<path d="M249 224 Q295 209 341 224 L353 319 Q295 337 237 319Z" fill="#e94335" class="outline"/>
+       <path d="M242 302 Q295 318 348 302" fill="none" stroke="#fffaf0" stroke-width="16"/>
+       <path d="M241 277 L349 277" stroke="#573524" stroke-width="12"/>
+       <rect x="282" y="266" width="27" height="23" rx="3" fill="#f6bf3d" class="outline"/>
+       <rect x="289" y="272" width="13" height="11" fill="#573524"/>`)+
+  S(4,`<path d="M245 239 Q217 248 199 267" fill="none" stroke="#e94335" stroke-width="23" stroke-linecap="round" class="outline"/>
+       <circle cx="197" cy="268" r="10" fill="#573524" class="outline"/>
+       <rect x="163" y="211" width="55" height="49" rx="6" fill="#5eaa55" class="outline"/>
+       <path d="M190 211 V260 M163 233 H218" stroke="#f3c347" stroke-width="7"/>
+       <path d="M190 211 Q174 196 171 210 Q176 222 190 216 Q206 196 211 210 Q207 221 190 216"
+       fill="#e94335" class="outline"/>`)+
+  S(5,`<path d="M345 239 Q373 248 392 267" fill="none" stroke="#e94335" stroke-width="23" stroke-linecap="round" class="outline"/>
+       <circle cx="394" cy="268" r="10" fill="#573524" class="outline"/>`)+
+  S(6,`<path d="M270 316 L261 365" stroke="#e94335" stroke-width="22" stroke-linecap="round" class="outline"/>
+       <path d="M320 316 L340 354" stroke="#e94335" stroke-width="22" stroke-linecap="round" class="outline"/>
+       <path d="M253 342 L270 342 M326 334 L342 326" stroke="#fffaf0" stroke-width="10"/>
+       <path d="M245 365 Q264 351 282 365 Q280 383 253 384 Q241 379 245 365Z" fill="#573524" class="outline"/>
+       <path d="M333 354 Q348 338 365 348 Q368 366 348 376 Q335 372 333 354Z" fill="#573524" class="outline"/>`));
+if(type==="gingerbread") return scaffold(
   S(1,`<circle cx="295" cy="145" r="46" fill="#c9854f" class="outline"/><path d="M263 118 q10 8 18 0 q10 8 18 0 q10 8 18 0" fill="none" stroke="#fff7ea" stroke-width="6"/>`)+
   S(2,`<path d="M260 184 Q295 170 330 184 L341 276 Q332 303 310 311 L280 311 Q258 303 249 276Z" fill="#c9854f" class="outline"/>`)+
   S(3,`<circle cx="279" cy="142" r="5" fill="#4d3529"/><circle cx="311" cy="142" r="5" fill="#4d3529"/><path d="M279 160 Q295 174 311 160" fill="none" stroke="#fff7ea" stroke-width="6" class="happy-mouth"/><path d="M280 171 Q295 157 310 171" fill="none" stroke="#fff7ea" stroke-width="6" class="sad-mouth"/><circle cx="295" cy="220" r="7" fill="#e75b5b"/><circle cx="295" cy="250" r="7" fill="#6f9f68"/>`)+
@@ -855,7 +902,7 @@ if(type==="stickman") return scaffold(
 }
 
 function alignCharacterToLine(type){
- const offsets={snowman:-6,gingerbread:-13,ghost:-3,turkey:-9,heart:-8,earth:-35,flower:14,pencil:10,scarecrow:27,leprechaun:40,summerboy:4,stickman:-8,sun:-42};
+ const offsets={snowman:-6,gingerbread:-13,santa:33,ghost:-3,turkey:-9,heart:-8,earth:-35,flower:14,pencil:10,scarecrow:27,leprechaun:40,summerboy:4,stickman:-8,sun:-42};
  const dy=offsets[type]||0;
  document.querySelectorAll("#art svg .stage").forEach(g=>g.setAttribute("transform",`translate(0 ${dy})`));
 }
